@@ -27,5 +27,5 @@ with mlflow.start_run():
 
    #Log metrics and model
    mlflow.log_metric("accuracy", accuracy)
-   mlflow.sklearn.log_model(model, name="model", 
+   mlflow.sklearn.log_model(model, artifact_path="model",
    skops_trusted_types=["sklearn.tree._tree.Tree"])
